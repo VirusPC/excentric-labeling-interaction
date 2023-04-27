@@ -16,7 +16,9 @@ Excentric labeling interaction is based on the [excentric labeling layout algrit
 ```ts
 import excentricLabeling from "excent";
 
-import {addExcentricLabelingInteraction, computeSizeOfLabels}  from "excentric-labeling-interaction";
+import eli from "excentric-labeling-interaction";
+
+const {addExcentricLabelingInteraction, computeSizeOfLabels} = eli;
 
 const {mainLayer, coordinatesWithInfo} = renderScatterPlot(g, width, height, data, fieldX, fieldY, fieldColor, interactionParams, setStateFuncs);
 
@@ -29,5 +31,17 @@ addExcentricLabelingInteraction(mainLayer, width, height, rawInfos, interactionP
         setStateFuncs.setRandomLabel(rp?.label || "");
     }
 });
+
+function getRawInfos(points, root, fontSize) {
+  const rawInfos = points.map((point) => {
+    return {
+      ...point,
+      labelWidth: 0,
+      labelHeight: 0,
+    };
+  });
+  computeSizeOfLabels(rawInfos, root, fontSize);
+  return rawInfos;
+}
 ```
 
