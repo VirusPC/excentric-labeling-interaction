@@ -32,7 +32,10 @@ addExcentricLabelingInteraction(mainLayer, width, height, rawInfos, interactionP
 function computeLabelSizeEachPoint(points, root, fontSize) {
   const rawInfos = points.map((point) => {
     return {
-      ...point,
+      x: point.x,
+      y: point.x,
+      color: point.color,
+      label: point.label,
       labelWidth: 0,
       labelHeight: 0,
     };
