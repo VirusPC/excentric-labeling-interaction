@@ -1,6 +1,6 @@
 {
   "name": "excentric-labeling-interaction",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "exentric labeling interaction",
   "type": "commonjs",
   "main": "dist/index.js",
