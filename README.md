@@ -13,6 +13,8 @@ Excentric labeling interaction is based on the [excentric labeling layout algrit
 
 ## Usage
 
+[see here](https://github.com/VirusPC/excentric-labeling-react/blob/0c60a3b068ad04ba49f77d52be8c2731d7c610da/src/components/render-using-d3.js#L46)
+
 ```ts
 import excentricLabeling from "excent";
 import eli from "excentric-labeling-interaction";
